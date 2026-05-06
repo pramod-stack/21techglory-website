@@ -31,7 +31,7 @@ export default function Home() {
           line1: "Ready to Grow?",
           line2: "Let's Build Your Digital System"
         }}
-        subtitle="We don't just build websites — we build complete digital growth engines that bring customers, close deals, and scale your business 24/7."
+        subtitle={<>We don&apos;t just build websites — we build complete digital growth engines that bring customers, close deals, and scale your <span className="whitespace-nowrap">business 24/7.</span></>}
         buttons={{
           primary: {
             text: "Book Your Free Strategy Call",

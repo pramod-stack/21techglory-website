@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { DIcons } from "dicons";
 import { useTheme } from "next-themes";
 import React from "react";
@@ -91,8 +92,8 @@ export default function Footer() {
     <footer className="w-full border-t border-white/10 bg-black">
       <div className="relative mx-auto grid max-w-7xl items-start justify-center gap-6 p-10 pb-0 md:flex md:justify-between">
         <div className="flex flex-col items-center md:items-start max-w-sm">
-          <Link href="/">
-            <p className="flex items-center justify-center rounded-full mb-4">
+          <Link href="/" className="group flex items-center justify-center md:justify-start mb-4">
+            <p className="flex items-center justify-center rounded-full">
               <span className="text-3xl font-black bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">21TG</span>
             </p>
           </Link>

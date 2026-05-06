@@ -6,7 +6,7 @@ const pricingPlans = [
   {
     planName: 'Starter',
     description: 'Perfect for new & small local businesses.',
-    price: '299',
+    price: '10k+',
     features: [
       '5-Page Professional Website',
       'Google My Business Setup',
@@ -21,7 +21,7 @@ const pricingPlans = [
   {
     planName: 'Growth',
     description: 'For businesses ready to scale fast.',
-    price: '799',
+    price: '20k+',
     features: [
       'Custom 10-Page Website',
       'Full SEO + GMB Management',
@@ -37,7 +37,7 @@ const pricingPlans = [
   {
     planName: 'Agency',
     description: 'Complete digital transformation package.',
-    price: '1499',
+    price: 'Customizable',
     features: [
       'Full Custom Web Application',
       'AI Chatbot + Automation Suite',
@@ -92,9 +92,8 @@ export default function PricingSection() {
 
               <div className="mb-8">
                 <div className="flex items-baseline">
-                  <span className="text-4xl font-bold text-white">$</span>
-                  <span className="text-6xl font-black text-white tracking-tighter">{plan.price}</span>
-                  <span className="text-gray-400 ml-2">/month</span>
+                  {plan.price !== 'Customizable' && <span className="text-4xl font-bold text-white">₹</span>}
+                  <span className={`font-black text-white tracking-tighter ${plan.price === 'Customizable' ? 'text-4xl' : 'text-6xl'}`}>{plan.price}</span>
                 </div>
               </div>
 

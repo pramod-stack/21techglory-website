@@ -541,9 +541,13 @@ export const Component = () => {
   }, [totalSections]);
 
   const splitTitle = (text: string) => {
-    return text.split('').map((char, i) => (
-      <span key={i} className="title-char inline-block">
-        {char === ' ' ? '\u00A0' : char}
+    return text.split(' ').map((word, wordIndex) => (
+      <span key={wordIndex} className="inline-block whitespace-nowrap mr-[0.2em]">
+        {word.split('').map((char, charIndex) => (
+          <span key={charIndex} className="title-char inline-block">
+            {char}
+          </span>
+        ))}
       </span>
     ));
   };
@@ -609,11 +613,11 @@ export const Component = () => {
           <section key={i} className="h-screen w-full flex flex-col items-center justify-center text-center px-4 pointer-events-none">
             <div className="hero-content cosmos-content pointer-events-auto">
               {i === 0 ? (
-                <h1 ref={titleRef} className="hero-title text-5xl sm:text-6xl md:text-8xl lg:text-9xl font-black text-white mb-6 tracking-tighter" style={{ textShadow: '0 0 40px rgba(6, 182, 212, 0.5)' }}>
+                <h1 ref={titleRef} className="hero-title text-5xl sm:text-6xl md:text-8xl lg:text-9xl font-black text-red-500 mb-6 tracking-tighter" style={{ textShadow: '0 0 40px rgba(239, 68, 68, 0.6)' }}>
                   {splitTitle(section.title)}
                 </h1>
               ) : (
-                <h1 className="hero-title text-5xl sm:text-6xl md:text-8xl lg:text-9xl font-black text-white mb-6 tracking-tighter" style={{ textShadow: '0 0 40px rgba(6, 182, 212, 0.5)' }}>
+                <h1 className="hero-title text-5xl sm:text-6xl md:text-8xl lg:text-9xl font-black text-red-500 mb-6 tracking-tighter" style={{ textShadow: '0 0 40px rgba(239, 68, 68, 0.6)' }}>
                   {splitTitle(section.title)}
                 </h1>
               )}

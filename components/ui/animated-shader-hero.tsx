@@ -11,7 +11,7 @@ interface HeroProps {
     line1: string;
     line2: string;
   };
-  subtitle: string;
+  subtitle: string | React.ReactNode;
   buttons?: {
     primary?: {
       text: string;
@@ -358,10 +358,10 @@ export const AnimatedShaderHero: React.FC<HeroProps> = ({
         <div className="text-center space-y-6 max-w-5xl mx-auto px-4">
           {/* Main Heading */}
           <div className="space-y-2">
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-white tracking-tighter">
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-red-500 tracking-tighter">
               {headline.line1}
             </h1>
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-black bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent tracking-tighter">
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-black bg-gradient-to-r from-red-600 to-red-400 bg-clip-text text-transparent tracking-tighter">
               {headline.line2}
             </h1>
           </div>

@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -40,10 +41,10 @@ export default function Navbar() {
 
         {/* CTA Button */}
         <div className="flex items-center gap-4">
-          <a href="https://wa.me/919999999999" target="_blank" rel="noreferrer" className="hidden sm:flex px-6 py-2.5 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 text-white text-sm font-semibold backdrop-blur-md transition-all">
+          <a href="https://wa.me/9110291339" target="_blank" rel="noreferrer" className="hidden sm:flex px-6 py-2.5 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 text-white text-sm font-semibold backdrop-blur-md transition-all">
             Client Login
           </a>
-          <a href="https://wa.me/919999999999" target="_blank" rel="noreferrer" className="px-6 py-2.5 rounded-full bg-cyan-500 hover:bg-cyan-400 text-black text-sm font-bold shadow-[0_0_15px_rgba(6,182,212,0.4)] transition-all">
+          <a href="https://wa.me/9110291339" target="_blank" rel="noreferrer" className="px-6 py-2.5 rounded-full bg-cyan-500 hover:bg-cyan-400 text-black text-sm font-bold shadow-[0_0_15px_rgba(6,182,212,0.4)] transition-all">
             Let&apos;s Talk
           </a>
         </div>
