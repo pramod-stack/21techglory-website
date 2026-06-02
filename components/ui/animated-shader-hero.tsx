@@ -16,10 +16,12 @@ interface HeroProps {
     primary?: {
       text: string;
       href?: string;
+      onClick?: () => void;
     };
     secondary?: {
       text: string;
       href?: string;
+      onClick?: () => void;
     };
   };
   className?: string;
@@ -377,14 +379,23 @@ export const AnimatedShaderHero: React.FC<HeroProps> = ({
           {buttons && (
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-8">
               {buttons.primary && (
-                <a 
-                  href={buttons.primary.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="px-8 py-4 bg-cyan-500 hover:bg-cyan-400 text-black rounded-full font-bold text-lg transition-all duration-300 shadow-[0_0_20px_rgba(6,182,212,0.4)] hover:shadow-[0_0_30px_rgba(6,182,212,0.6)] inline-block"
-                >
-                  {buttons.primary.text}
-                </a>
+                buttons.primary.onClick ? (
+                  <button 
+                    onClick={buttons.primary.onClick}
+                    className="px-8 py-4 bg-cyan-500 hover:bg-cyan-400 text-black rounded-full font-bold text-lg transition-all duration-300 shadow-[0_0_20px_rgba(6,182,212,0.4)] hover:shadow-[0_0_30px_rgba(6,182,212,0.6)] inline-block"
+                  >
+                    {buttons.primary.text}
+                  </button>
+                ) : (
+                  <a 
+                    href={buttons.primary.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-8 py-4 bg-cyan-500 hover:bg-cyan-400 text-black rounded-full font-bold text-lg transition-all duration-300 shadow-[0_0_20px_rgba(6,182,212,0.4)] hover:shadow-[0_0_30px_rgba(6,182,212,0.6)] inline-block"
+                  >
+                    {buttons.primary.text}
+                  </a>
+                )
               )}
               {buttons.secondary && (
                 <a 

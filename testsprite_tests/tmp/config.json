@@ -1,0 +1,17 @@
+{
+  "status": "commited",
+  "type": "frontend",
+  "scope": "codebase",
+  "localEndpoint": "http://localhost:3000",
+  "executionArgs": {
+    "projectName": "21techglory",
+    "projectPath": "c:\\Users\\pramo\\OneDrive\\Documents\\21techglory 2.0\\21techglory",
+    "testIds": [],
+    "additionalInstruction": "",
+    "serverMode": "development",
+    "envs": {
+      "API_KEY": "sk-user-0zDmNkQJcDXR7Xo7SXTepwz3Yp74s2On7xmNqb9kJ9RDJuZC8cMdmW91uL_DIeSUhlB-Q4CaomRo5bmeXcfAHGVr6ngY4PrFVPqqSpqNsQIEAMo2rX9AzPX8HssnjehlZHI"
+    }
+  },
+  "serverPort": 54043
+}

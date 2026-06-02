@@ -1,0 +1,304 @@
+[
+  {
+    "id": "TC001",
+    "title": "Open the project inquiry modal from the hero CTA",
+    "description": "A visitor can open the project-start modal from the homepage hero and see the inquiry experience appear.",
+    "category": "Start Project Modal",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the main value proposition is visible"
+      },
+      {
+        "type": "action",
+        "description": "Click the primary call to action to start a project"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the project inquiry modal is displayed"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC002",
+    "title": "Scroll through all landing page content sections",
+    "description": "A visitor can explore the landing page from services through pricing and see the core marketing sections load correctly.",
+    "category": "Landing Page Content",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Scroll down the page to the services section"
+      },
+      {
+        "type": "action",
+        "description": "Scroll down the page to the portfolio section"
+      },
+      {
+        "type": "action",
+        "description": "Scroll down the page to the testimonials section"
+      },
+      {
+        "type": "action",
+        "description": "Scroll down the page to the pricing section"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the services section is visible"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the portfolio, testimonials, and pricing sections are visible"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC003",
+    "title": "Open the project inquiry modal after exploring the page",
+    "description": "A visitor can scroll through the landing page content and still launch the project-start modal from the CTA.",
+    "category": "Start Project Modal",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Scroll down the page to the portfolio section"
+      },
+      {
+        "type": "action",
+        "description": "Scroll down the page to the testimonials section"
+      },
+      {
+        "type": "action",
+        "description": "Click the call to action to start a project"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the project inquiry modal is displayed"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the landing page remains accessible behind the modal"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC004",
+    "title": "Review portfolio and testimonials before starting a project",
+    "description": "A visitor can inspect showcase content and then open the project-start modal from the page CTA.",
+    "category": "Landing Page Content",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Scroll down the page to the portfolio section"
+      },
+      {
+        "type": "action",
+        "description": "Scroll down the page to the testimonials section"
+      },
+      {
+        "type": "action",
+        "description": "Click the call to action to start a project"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the portfolio and testimonials sections are visible"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the project inquiry modal is displayed"
+      }
+    ],
+    "priority": "Medium"
+  },
+  {
+    "id": "TC005",
+    "title": "Close the project inquiry modal",
+    "description": "A visitor can open the project-start modal and dismiss it without leaving the landing page.",
+    "category": "Start Project Modal",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Click the primary call to action to start a project"
+      },
+      {
+        "type": "action",
+        "description": "Close the project inquiry modal"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the landing page is visible"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the project inquiry modal is no longer displayed"
+      }
+    ],
+    "priority": "Medium"
+  },
+  {
+    "id": "TC006",
+    "title": "Reopen the project inquiry modal after closing it",
+    "description": "A visitor can dismiss the modal and open it again from the landing page without breaking page state.",
+    "category": "Start Project Modal",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Click the primary call to action to start a project"
+      },
+      {
+        "type": "action",
+        "description": "Close the project inquiry modal"
+      },
+      {
+        "type": "action",
+        "description": "Click the primary call to action to start a project again"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the project inquiry modal is displayed"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the landing page is still available"
+      }
+    ],
+    "priority": "Medium"
+  },
+  {
+    "id": "TC007",
+    "title": "Complete the project inquiry form",
+    "description": "A visitor can enter project details in the modal and keep the submitted information visible before closing it.",
+    "category": "Start Project Modal",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Click the primary call to action to start a project"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the project details field with a short project summary"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the contact details field with a valid contact value"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the project inquiry form reflects the entered details"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the modal remains open with the completed form"
+      }
+    ],
+    "priority": "Medium"
+  },
+  {
+    "id": "TC008",
+    "title": "Experience cinematic animations while browsing the page",
+    "description": "A visitor can continue reading the landing page while motion and 3D visual effects appear as sections come into view.",
+    "category": "Landing Page Content",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Scroll down the page slowly through multiple sections"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify animated section transitions are displayed"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the page content remains readable while scrolling"
+      }
+    ],
+    "priority": "Medium"
+  },
+  {
+    "id": "TC009",
+    "title": "Handle empty project details in the modal",
+    "description": "A visitor can open the project-start modal and see validation feedback when required details are left empty.",
+    "category": "Start Project Modal",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Click the primary call to action to start a project"
+      },
+      {
+        "type": "action",
+        "description": "Submit the project inquiry form without entering details"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify a validation error is visible"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the project inquiry modal stays open"
+      }
+    ],
+    "priority": "Low"
+  },
+  {
+    "id": "TC010",
+    "title": "Use the landing page on a fast scroll",
+    "description": "A visitor can rapidly move through the landing page and still reach the main content sections without losing the page layout.",
+    "category": "Landing Page Content",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Scroll quickly to the lower sections of the page"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the lower content sections are visible"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the page layout remains usable"
+      }
+    ],
+    "priority": "Low"
+  }
+]

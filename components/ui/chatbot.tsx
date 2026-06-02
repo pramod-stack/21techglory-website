@@ -34,7 +34,7 @@ export default function ChatBot() {
       {/* Floating Chat Button */}
       <button
         onClick={() => setIsOpen(true)}
-        className={`fixed bottom-6 right-6 w-14 h-14 bg-green-500 rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 transition-all z-50 ${isOpen ? 'scale-0' : 'scale-100'}`}
+        className={`fixed bottom-8 right-8 w-14 h-14 bg-green-500 rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 transition-all z-[90] ${isOpen ? 'scale-0' : 'scale-100'}`}
       >
         <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white">
           <path d="M12 8V4H8"/>
@@ -47,7 +47,7 @@ export default function ChatBot() {
       </button>
 
       {/* Chat Window */}
-      <div className={`fixed bottom-6 right-6 w-80 bg-white rounded-2xl shadow-2xl transition-all duration-300 z-50 flex flex-col overflow-hidden origin-bottom-right ${isOpen ? 'scale-100 opacity-100' : 'scale-0 opacity-0 pointer-events-none'}`}>
+      <div className={`fixed bottom-8 right-8 w-80 bg-white rounded-2xl shadow-2xl transition-all duration-300 z-[90] flex flex-col overflow-hidden origin-bottom-right ${isOpen ? 'scale-100 opacity-100' : 'scale-0 opacity-0 pointer-events-none'}`}>
         {/* Header */}
         <div className="bg-green-500 p-4 flex justify-between items-center text-white">
           <div className="flex items-center gap-2">

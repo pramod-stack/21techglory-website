@@ -1,27 +1,56 @@
+"use client";
 
-
+import { useState } from 'react';
+import Preloader from '@/components/ui/preloader';
+import Navbar from '@/components/ui/navbar';
 import HeroWrapper from '@/components/ui/hero-wrapper';
-import OrbitingSkills from '@/components/ui/orbiting-skills';
+import ServicesBento from '@/components/ui/services-bento';
+import ResultsCounters from '@/components/ui/results-counters';
+import IndustriesMarquee from '@/components/ui/industries-marquee';
+import ComparisonSection from '@/components/ui/comparison-section';
 import { PortfolioParallax } from '@/components/ui/portfolio-parallax';
+import CaseStudies from '@/components/ui/case-studies';
 import Testimonials from '@/components/ui/testimonials-columns-1';
 import PricingSection from '@/components/ui/animated-glassy-pricing';
 import AnimatedShaderHero from '@/components/ui/animated-shader-hero';
+import BlogPreview from '@/components/ui/blog-preview';
 import Footer from '@/components/ui/footer';
-import OnboardingForm from '@/components/ui/multistep-form';
-
-import Navbar from '@/components/ui/navbar';
-
-
+import StartProjectModal from '@/components/ui/start-project-modal';
 
 export default function Home() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
-    <main className="min-h-screen text-white bg-transparent">
-      <Navbar />
-      <HeroWrapper />
-      <OrbitingSkills />
-      <PortfolioParallax />
-      <Testimonials />
-      <PricingSection />
+    <main className="min-h-screen text-white bg-black overflow-x-hidden">
+      <Preloader />
+      <Navbar onOpenModal={() => setIsModalOpen(true)} />
+      
+      <HeroWrapper onOpenModal={() => setIsModalOpen(true)} />
+      <IndustriesMarquee />
+      
+      <div id="services">
+        <ServicesBento />
+      </div>
+      
+      <ResultsCounters />
+      <ComparisonSection />
+      
+      <div id="work">
+        <PortfolioParallax />
+      </div>
+      
+      <CaseStudies />
+      
+      <div id="about">
+        <Testimonials />
+      </div>
+      
+      <div id="pricing">
+        <PricingSection />
+      </div>
+      
+      <BlogPreview />
+      
       <AnimatedShaderHero 
         trustBadge={{
           text: "Trusted by 50+ businesses across South India",
@@ -34,8 +63,8 @@ export default function Home() {
         subtitle={<>We don&apos;t just build websites — we build complete digital growth engines that bring customers, close deals, and scale your <span className="whitespace-nowrap">business 24/7.</span></>}
         buttons={{
           primary: {
-            text: "Book Your Free Strategy Call",
-            href: "https://wa.me/919999999999"
+            text: "Start Your Project",
+            onClick: () => setIsModalOpen(true)
           },
           secondary: {
             text: "See Our Pricing",
@@ -43,15 +72,11 @@ export default function Home() {
           }
         }}
       />
-      <div id="onboarding" className="py-20 relative bg-black">
-        <div className="absolute inset-0 bg-gradient-to-b from-black via-gray-900 to-black z-0 pointer-events-none" />
-        <div className="max-w-4xl mx-auto px-4 text-center mb-10 z-10 relative">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">Start Your Project</h2>
-          <p className="text-gray-400 text-lg">Fill out the form below and we'll get back to you within 24 hours.</p>
-        </div>
-        <OnboardingForm />
-      </div>
+      
       <Footer />
+
+      {/* Reusable Modal for Forms */}
+      <StartProjectModal isOpen={isModalOpen} setIsOpen={setIsModalOpen} />
     </main>
   );
 }

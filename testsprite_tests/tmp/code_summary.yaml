@@ -1,0 +1,43 @@
+version: "2"
+type: frontend
+tech_stack:
+  - TypeScript
+  - React
+  - Next.js
+  - Tailwind CSS
+  - Framer Motion
+  - GSAP
+  - Three.js
+  - Shadcn UI
+routes:
+  - path: /
+    file: app/page.tsx
+    auth_required: false
+    description: Main landing page for 21TechGlory Agency
+features:
+  - name: Landing Page Content
+    description: Scroll through the landing page with 3D cinematic animations, services bento, portfolio, testimonials, and pricing.
+    files:
+      - app/page.tsx
+      - components/ui/hero-wrapper.tsx
+      - components/ui/horizon-hero-section.tsx
+    entry_route: /
+    user_interactions:
+      - Scroll down the page to trigger GSAP/Three.js animations
+      - View various sections like services, portfolio, testimonials
+    api_calls: []
+    auth_required: false
+  - name: Start Project Modal
+    description: Open a modal to start a new project by clicking the CTA button.
+    files:
+      - app/page.tsx
+      - components/ui/start-project-modal.tsx
+    entry_route: /
+    user_interactions:
+      - Click "Start Your Project" button
+      - See the modal appear
+      - Fill in form details (if applicable inside the modal)
+      - Close the modal
+    api_calls: []
+    auth_required: false
+known_limitations: []

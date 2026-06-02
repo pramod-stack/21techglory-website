@@ -14,9 +14,24 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "21TechGlory | Digital Agency Bangalore — Websites, AI & Growth Systems",
-  description: "21TechGlory builds high-converting websites, AI automation & ad campaigns that bring real customers to your business. Free strategy call available.",
-  keywords: "digital agency bangalore, website development, SEO, Google ads, AI automation, CRM",
+  title: "21TechGlory | AI Growth & Digital Infrastructure Partner",
+  description: "21TechGlory helps businesses scale with AI, automation, and modern digital growth systems. We build premium websites and generate high-quality leads.",
+  keywords: ["website development Bangalore", "SEO agency Bangalore", "AI automation agency", "local SEO services Bangalore", "Google business optimization", "AI agency India", "digital growth agency"],
+  openGraph: {
+    title: "21TechGlory | AI Growth & Digital Infrastructure Partner",
+    description: "Scale your business with AI, automation, and premium digital experiences.",
+    url: "https://21techglory.com",
+    siteName: "21TechGlory",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+      },
+    ],
+    locale: "en_IN",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
