@@ -24,7 +24,7 @@ export default function ChatBot() {
       
       setTimeout(() => {
         // Redirect to WhatsApp
-        window.open(`https://wa.me/9110291339?text=${encodeURIComponent(input)}`, '_blank');
+        window.open(`https://wa.me/917795354043?text=${encodeURIComponent(input)}`, '_blank');
       }, 1000);
     }, 1000);
   };

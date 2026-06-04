@@ -182,7 +182,7 @@ export const Component = ({ onOpenModal }: { onOpenModal?: () => void }) => {
         const shape = new THREE.Shape(points); const geometry = new THREE.ShapeGeometry(shape);
         const material = new THREE.MeshBasicMaterial({ color: layer.color, transparent: true, opacity: layer.opacity, side: THREE.DoubleSide });
         const mountain = new THREE.Mesh(geometry, material);
-        mountain.position.z = layer.distance; mountain.position.y = layer.distance; mountain.userData = { baseZ: layer.distance, index };
+        mountain.position.z = layer.distance; mountain.position.y = layer.distance; mountain.userData = { baseZ: layer.distance, index, originalOpacity: layer.opacity };
         refs.scene.add(mountain); refs.mountains.push(mountain);
       });
     };
@@ -231,6 +231,19 @@ export const Component = ({ onOpenModal }: { onOpenModal?: () => void }) => {
         const parallaxFactor = 1 + i * 0.5;
         mountain.position.x = Math.sin(time * 0.1) * 2 * parallaxFactor;
         mountain.position.y = 50 + (Math.cos(time * 0.15) * 1 * parallaxFactor);
+        
+        // Fade out as camera approaches to prevent clipping flash
+        if (refs.camera) {
+          const dist = smoothCameraPos.current.z - mountain.position.z;
+          const origOp = mountain.userData.originalOpacity || 1;
+          if (dist < 150 && dist > 0) {
+            mountain.material.opacity = (dist / 150) * origOp;
+          } else if (dist <= 0) {
+            mountain.material.opacity = 0;
+          } else {
+            mountain.material.opacity = origOp;
+          }
+        }
       });
 
       if (refs.composer) refs.composer.render();
@@ -355,28 +368,13 @@ export const Component = ({ onOpenModal }: { onOpenModal?: () => void }) => {
       refs.targetCameraX = currentPos.x + (nextPos.x - currentPos.x) * sectionProgress;
       refs.targetCameraY = currentPos.y + (nextPos.y - currentPos.y) * sectionProgress;
       refs.targetCameraZ = currentPos.z + (nextPos.z - currentPos.z) * sectionProgress;
-      
-      refs.mountains.forEach((mountain: any, i: number) => {
-        const speed = 1 + i * 0.9;
-        const targetZ = mountain.userData.baseZ + scrollY * speed * 0.5;
-        if (refs.nebula) refs.nebula.position.z = (targetZ + progress * speed * 0.01) - 100;
-        
-        mountain.userData.targetZ = targetZ;
-        if (progress > 0.7) {
-          mountain.position.z = 600000; // Hide mountains at end
-        } else {
-          if (refs.locations && refs.locations.length > i) {
-             mountain.position.z = refs.locations[i];
-          }
-        }
-      });
-      if (refs.nebula && refs.mountains.length > 3) {
-        refs.nebula.position.z = refs.mountains[3].position.z;
-      }
 
       // Constrain WebGL canvas and HUD visibility smoothly as hero scrolls out
-      // Starts fading out at progress 0.85 and is completely hidden by progress 1.0 (before next section enters)
-      const opacity = progress > 0.85 ? Math.max(0, (1 - progress) / 0.15) : 1;
+      let opacity = 1;
+      if (rect.bottom < windowHeight) {
+        opacity = Math.max(0, rect.bottom / windowHeight);
+      }
+
       if (canvasRef.current) {
         canvasRef.current.style.opacity = String(opacity);
         canvasRef.current.style.visibility = opacity === 0 ? 'hidden' : 'visible';

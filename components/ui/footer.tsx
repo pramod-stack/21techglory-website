@@ -142,7 +142,7 @@ export default function Footer() {
         <div className="flex flex-wrap items-center justify-center md:justify-start gap-4">
           <Link
             aria-label="WhatsApp"
-            href="https://wa.me/919999999999"
+            href="https://wa.me/917795354043"
             rel="noreferrer"
             target="_blank"
             className={Underline}
@@ -151,7 +151,7 @@ export default function Footer() {
           </Link>
           <Link
             aria-label="Instagram"
-            href="https://instagram.com/21techglory"
+            href="https://www.instagram.com/21_tech_glory/?hl=en"
             rel="noreferrer"
             target="_blank"
             className={Underline}
