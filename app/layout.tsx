@@ -45,9 +45,6 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
       suppressHydrationWarning
     >
-      <head>
-        <meta name="msvalidate.01" content="56063429288C9A89734499915C2298C6" />
-      </head>
       <body className="min-h-full flex flex-col" suppressHydrationWarning>
         {children}
         <FloatingCTA />
