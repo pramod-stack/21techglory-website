@@ -55,11 +55,18 @@ const navigation = {
           name: "Services",
           items: [
             { name: "Web Development", href: "/services/web-development" },
-            { name: "SEO & GMB", href: "/services/seo" },
-            { name: "Paid Ads", href: "/services/paid-ads" },
+            { name: "SEO", href: "/services/seo" },
             { name: "AI Automation", href: "/services/ai-automation" },
             { name: "CRM Systems", href: "/services/crm" },
-            { name: "Branding", href: "/services/branding" },
+            { name: "Paid Ads", href: "/services/paid-ads" },
+          ],
+        },
+        {
+          id: "industries",
+          name: "Industries",
+          items: [
+            { name: "Skincare", href: "/skincare" },
+            { name: "Hospitals", href: "/hospitals" },
           ],
         },
         {
@@ -68,7 +75,6 @@ const navigation = {
           items: [
             { name: "About Us", href: "/about" },
             { name: "Our Work", href: "/work" },
-            { name: "Pricing", href: "#pricing" },
             { name: "Contact", href: "/contact" },
           ],
         },
@@ -90,23 +96,23 @@ const Underline = `hover:-translate-y-1 border border-white/10 bg-white/5 rounde
 export default function Footer() {
   return (
     <footer className="w-full border-t border-white/10 bg-black">
-      <div className="relative mx-auto grid max-w-7xl items-start justify-center gap-6 p-10 pb-0 md:flex md:justify-between">
-        <div className="flex flex-col items-center md:items-start max-w-sm">
-          <Link href="/" className="group flex items-center justify-center md:justify-start mb-4">
+      <div className="relative mx-auto grid max-w-7xl items-start justify-center gap-6 p-10 pb-0 lg:flex lg:justify-between">
+        <div className="flex flex-col items-center lg:items-start max-w-sm mb-8 lg:mb-0">
+          <Link href="/" className="group flex items-center justify-center lg:justify-start mb-4">
             <p className="flex items-center justify-center rounded-full">
               <span className="text-3xl font-black bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">21TG</span>
             </p>
           </Link>
-          <p className="bg-transparent text-center text-sm leading-relaxed text-gray-400 md:text-left">
+          <p className="bg-transparent text-center text-sm leading-relaxed text-gray-400 lg:text-left">
             21TechGlory is a full-service digital agency helping local and growing businesses dominate online. We build websites, run ads, automate systems, and generate leads that convert to real revenue. Based in Bangalore — serving clients across India.
           </p>
         </div>
         
-        <div className="pt-8 md:pt-0">
+        <div className="w-full lg:w-auto">
           {navigation.categories.map((category) => (
             <div
               key={category.name}
-              className="grid grid-cols-2 md:grid-cols-3 gap-10 md:gap-16 leading-6"
+              className="grid grid-cols-2 sm:grid-cols-4 gap-8 md:gap-12 leading-6"
             >
               {category.sections.map((section) => (
                 <div key={section.name}>
