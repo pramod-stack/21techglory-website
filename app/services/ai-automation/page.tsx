@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import AiClientPage from './ai-client';
 
 export const metadata: Metadata = {
-  title: "AI Automation Services for Smarter Business Growth | 21TechGlory",
+  title: "AI Automation & Agentic Workflows | 21TechGlory",
   description: "Automate lead handling, follow-ups, WhatsApp flows, customer support, and repetitive workflows with practical AI automation built for growth.",
   alternates: {
     canonical: "https://21techglory.com/services/ai-automation",

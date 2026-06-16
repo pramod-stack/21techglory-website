@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import WebDevClientPage from './web-dev-client';
 
 export const metadata: Metadata = {
-  title: "Web Development Services for High-Converting Websites | 21TechGlory",
+  title: "Custom Web Development & Web Apps | 21TechGlory",
   description: "Custom web development for businesses that need fast, conversion-focused websites built to rank, convert, and scale with SEO, CRM, and automation.",
   alternates: {
     canonical: "https://21techglory.com/services/web-development",

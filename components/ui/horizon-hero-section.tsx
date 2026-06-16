@@ -454,9 +454,15 @@ export const Component = ({ onOpenModal }: { onOpenModal?: () => void }) => {
         {sectionsData.map((section, i) => (
           <section key={i} className="content-section h-screen w-full flex flex-col items-center justify-center text-center px-6">
             <div className="flex flex-col items-center justify-center">
-              <h2 className="text-5xl md:text-[7vw] font-extrabold leading-none tracking-tighter mb-6 overflow-hidden uppercase text-red-500 drop-shadow-[0_0_15px_rgba(239,68,68,0.5)]">
-                {splitTitle(section.title)}
-              </h2>
+              {i === 0 ? (
+                <h1 className="text-5xl md:text-[7vw] font-extrabold leading-none tracking-tighter mb-6 overflow-hidden uppercase text-red-500 drop-shadow-[0_0_15px_rgba(239,68,68,0.5)]">
+                  {splitTitle(section.title)}
+                </h1>
+              ) : (
+                <h2 className="text-5xl md:text-[7vw] font-extrabold leading-none tracking-tighter mb-6 overflow-hidden uppercase text-red-500 drop-shadow-[0_0_15px_rgba(239,68,68,0.5)]">
+                  {splitTitle(section.title)}
+                </h2>
+              )}
             </div>
         
             <div className="text-lg md:text-2xl font-light tracking-wide max-w-2xl text-red-200/85 drop-shadow-[0_0_6px_rgba(239,68,68,0.2)]">

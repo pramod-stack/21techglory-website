@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import SeoClientPage from './seo-client';
 
 export const metadata: Metadata = {
-  title: "SEO Services for Local Growth and Qualified Leads | 21TechGlory",
+  title: "SEO & Google Business Profile Services | 21TechGlory",
   description: "Data-driven SEO services for businesses that want better rankings, more qualified traffic, stronger local visibility, and measurable lead growth.",
   alternates: {
     canonical: "https://21techglory.com/services/seo",
