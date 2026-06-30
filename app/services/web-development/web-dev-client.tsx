@@ -152,7 +152,7 @@ export default function WebDevClientPage() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto mb-10 leading-relaxed"
           >
-            We build custom, lightning-fast, and search-optimized websites designed specifically to acquire, engage, and convert your ideal business clients. No templates. No clutter. Just pure performance.
+            We build custom, lightning-fast, and search-optimized websites designed specifically to acquire, engage, and convert your ideal business clients. No templates. No clutter. Just pure performance. Based in Bangalore? Work with our local <Link href="/locations/bangalore/website-development-company" className="text-cyan-400 hover:underline">website development company in Bangalore</Link> team.
           </motion.p>
 
           <motion.div

@@ -35,8 +35,8 @@ export default function Navbar({ onOpenModal }: { onOpenModal?: () => void }) {
   ];
 
   const industryItems = [
-    { name: "Skincare Clinics", href: "/skincare" },
-    { name: "Hospitals & Doctors", href: "/hospitals" },
+    { name: "Salons & Spas", href: "/industries/salons-spas" },
+    { name: "Clinics & Hospitals", href: "/industries/clinics-hospitals" },
   ];
 
   const isLinkActive = (href: string) => {
@@ -60,7 +60,7 @@ export default function Navbar({ onOpenModal }: { onOpenModal?: () => void }) {
               TechGlory
             </span>
           </Link>
-
+ 
           {/* Desktop Links */}
           <div className="hidden md:flex items-center gap-8">
             <Link 
@@ -71,7 +71,7 @@ export default function Navbar({ onOpenModal }: { onOpenModal?: () => void }) {
             >
               Home
             </Link>
-
+ 
             {/* Services Dropdown */}
             <div 
               className="relative group py-2"
@@ -104,7 +104,7 @@ export default function Navbar({ onOpenModal }: { onOpenModal?: () => void }) {
                 </div>
               </div>
             </div>
-
+ 
             {/* Industries Dropdown */}
             <div 
               className="relative group py-2"
@@ -112,7 +112,7 @@ export default function Navbar({ onOpenModal }: { onOpenModal?: () => void }) {
               onMouseLeave={() => setIndustriesOpen(false)}
             >
               <button className={`flex items-center gap-1 text-sm font-medium transition-colors cursor-pointer ${
-                pathname === '/skincare' || pathname === '/hospitals' ? 'text-cyan-400 font-semibold' : 'text-gray-300 hover:text-white'
+                pathname.startsWith('/industries') ? 'text-cyan-400 font-semibold' : 'text-gray-300 hover:text-white'
               }`}>
                 Industries
                 <ChevronDown className="w-4 h-4 transition-transform group-hover:rotate-180" />

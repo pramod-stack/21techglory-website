@@ -65,8 +65,18 @@ const navigation = {
           id: "industries",
           name: "Industries",
           items: [
-            { name: "Skincare", href: "/skincare" },
-            { name: "Hospitals", href: "/hospitals" },
+            { name: "Salons & Spas", href: "/industries/salons-spas" },
+            { name: "Clinics & Hospitals", href: "/industries/clinics-hospitals" },
+          ],
+        },
+        {
+          id: "locations",
+          name: "Locations",
+          items: [
+            { name: "Bangalore Hub", href: "/locations/bangalore" },
+            { name: "SEO Company", href: "/locations/bangalore/seo-company" },
+            { name: "Web Dev Company", href: "/locations/bangalore/website-development-company" },
+            { name: "GBP Optimization", href: "/locations/bangalore/google-business-profile-optimization" },
           ],
         },
         {
@@ -76,14 +86,17 @@ const navigation = {
             { name: "About Us", href: "/about" },
             { name: "Our Work", href: "/work" },
             { name: "Contact", href: "/contact" },
+            { name: "Testimonials", href: "/testimonials" },
           ],
         },
         {
           id: "legal",
           name: "Legal",
           items: [
-            { name: "Privacy Policy", href: "/privacy" },
-            { name: "Terms of Service", href: "/terms" },
+            { name: "Privacy Policy", href: "/privacy-policy" },
+            { name: "Terms of Service", href: "/terms-of-service" },
+            { name: "Engagement Terms", href: "/engagement-terms" },
+            { name: "Sitemap", href: "/sitemap.xml" },
           ],
         },
       ],
@@ -95,10 +108,10 @@ const Underline = `hover:-translate-y-1 border border-white/10 bg-white/5 rounde
 
 export default function Footer() {
   return (
-    <footer className="w-full border-t border-white/10 bg-black">
+    <footer className="w-full border-t border-white/10 bg-black text-gray-400">
       <div className="relative mx-auto grid max-w-7xl items-start justify-center gap-6 p-10 pb-0 lg:flex lg:justify-between">
-        <div className="flex flex-col items-center lg:items-start max-w-sm mb-8 lg:mb-0">
-          <Link href="/" className="group flex items-center justify-center lg:justify-start mb-4">
+        <div className="flex flex-col items-center lg:items-start max-w-sm mb-8 lg:mb-0 space-y-4">
+          <Link href="/" className="group flex items-center justify-center lg:justify-start">
             <p className="flex items-center justify-center rounded-full">
               <span className="text-3xl font-black bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">21TG</span>
             </p>
@@ -106,13 +119,21 @@ export default function Footer() {
           <p className="bg-transparent text-center text-sm leading-relaxed text-gray-400 lg:text-left">
             21TechGlory is a full-service digital agency helping local and growing businesses dominate online. We build websites, run ads, automate systems, and generate leads that convert to real revenue. Based in Bangalore — serving clients across India.
           </p>
+          <div className="flex flex-col space-y-2 text-xs text-gray-500 text-center lg:text-left w-full">
+            <p>Email: <a href="mailto:{{TODO: branded_email}}" className="text-cyan-400 hover:underline">{"{{TODO: branded_email}}"}</a></p>
+            <p>Phone: <a href="tel:{{TODO: phone_raw}}" className="text-cyan-400 hover:underline">{"{{TODO: phone}}"}</a></p>
+            <p>Office: Bangalore, Karnataka, India</p>
+            <p>Hours: Mon - Sat: 9:00 AM - 7:00 PM IST</p>
+            <p>Entity: {"{{TODO: company_entity}}"}</p>
+            <p>GSTIN: {"{{TODO: gstin}}"}</p>
+          </div>
         </div>
         
         <div className="w-full lg:w-auto">
           {navigation.categories.map((category) => (
             <div
               key={category.name}
-              className="grid grid-cols-2 sm:grid-cols-4 gap-8 md:gap-12 leading-6"
+              className="grid grid-cols-2 sm:grid-cols-5 gap-8 md:gap-12 leading-6"
             >
               {category.sections.map((section) => (
                 <div key={section.name}>
@@ -148,7 +169,7 @@ export default function Footer() {
         <div className="flex flex-wrap items-center justify-center md:justify-start gap-4">
           <Link
             aria-label="WhatsApp"
-            href="https://wa.me/917795354043"
+            href="https://wa.me/{{TODO: whatsapp_number_raw}}"
             rel="noreferrer"
             target="_blank"
             className={Underline}
@@ -157,7 +178,7 @@ export default function Footer() {
           </Link>
           <Link
             aria-label="Instagram"
-            href="https://www.instagram.com/21_tech_glory/?hl=en"
+            href="https://www.instagram.com/{{TODO: instagram_handle}}"
             rel="noreferrer"
             target="_blank"
             className={Underline}
@@ -166,7 +187,7 @@ export default function Footer() {
           </Link>
           <Link
             aria-label="LinkedIn"
-            href="https://linkedin.com/company/21techglory"
+            href="https://linkedin.com/company/{{TODO: linkedin_company}}"
             rel="noreferrer"
             target="_blank"
             className={Underline}

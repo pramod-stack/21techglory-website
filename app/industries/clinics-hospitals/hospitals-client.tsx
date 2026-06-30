@@ -1,10 +1,12 @@
 "use client";
 import React, { useEffect, useState } from 'react';
+import Link from 'next/link';
 import Navbar from '@/components/ui/navbar';
 import Footer from '@/components/ui/footer';
 import StartProjectModal from '@/components/ui/start-project-modal';
+import { Post } from '@/lib/blog/posts-data';
 
-export default function HospitalsClientPage() {
+export default function HospitalsClientPage({ relatedPosts }: { relatedPosts?: Post[] }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
@@ -679,7 +681,7 @@ p{font-size:16px;color:var(--muted);line-height:1.8}
               <div className="feature-icon">📊</div>
               <span className="feature-tag">Growth</span>
               <h3>Healthcare SEO Services</h3>
-              <p>Specialty-specific clinic SEO services targeting high-intent keywords like "dental implants in Hyderabad", "cardiologist in Bangalore" or "IVF center in Chennai". Includes on-page optimization, medical content writing, backlinks from health directories, and monthly ranking reports.</p>
+              <p>Specialty-specific clinic SEO services targeting high-intent keywords like "dental implants in Hyderabad", "cardiologist in <Link href="/locations/bangalore" className="text-cyan-400 hover:underline">Bangalore</Link>" or "IVF center in Chennai". Includes on-page optimization, medical content writing, backlinks from health directories, and monthly ranking reports.</p>
             </div>
           </div>
         </div>
@@ -1096,6 +1098,36 @@ p{font-size:16px;color:var(--muted);line-height:1.8}
           <p style={{"marginTop":"30px","fontSize":"14px"}}>Trusted by 50+ healthcare practices across South India · 4.9★ client rating · 98% retention</p>
         </div>
       </section>
+
+      {relatedPosts && relatedPosts.length > 0 && (
+        <section style={{"padding":"80px 0","background":"rgba(255,255,255,.01)","borderTop":"1px solid var(--line)"}}>
+          <div className="container">
+            <div className="reveal" style={{"textAlign":"center","maxWidth":"780px","margin":"0 auto 50px auto"}}>
+              <span className="eyebrow">Industry Insights</span>
+              <h2>Healthcare & <span className="gradient-text">Clinic SEO Guides</span></h2>
+              <p className="section-intro">Read our latest deep-dives on medical search marketing, conversion design, and operational automation.</p>
+            </div>
+            
+            <div style={{"display":"grid","gridTemplateColumns":"repeat(auto-fit, minmax(300px, 1fr))","gap":"30px"}}>
+              {relatedPosts.map((post) => (
+                <Link
+                  key={post.slug}
+                  href={`/blog/${post.slug}`}
+                  style={{"display":"flex","flexDirection":"column","padding":"30px","background":"rgba(255,255,255,.02)","border":"1px solid rgba(255,255,255,.05)","borderRadius":"24px","textDecoration":"none","transition":"all .3s"}}
+                  className="hover-card"
+                >
+                  <span style={{"fontSize":"12px","fontWeight":"700","color":"var(--primary)","textTransform":"uppercase","letterSpacing":"1.5px","marginBottom":"12px"}}>{post.category}</span>
+                  <h3 style={{"fontSize":"18px","fontWeight":"700","color":"#fff","margin":"0 0 10px 0","lineHeight":"1.4"}}>{post.title}</h3>
+                  <p style={{"fontSize":"14px","color":"var(--muted)","margin":"0 0 20px 0","lineHeight":"1.6","flexGrow":"1"}}>{post.description}</p>
+                  <span style={{"fontSize":"13px","fontWeight":"600","color":"#fff","display":"flex","alignItems":"center","gap":"5px"}}>
+                    Read article <span style={{"transition":"transform .2s"}} className="arrow-span">→</span>
+                  </span>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       <Footer />
       <StartProjectModal isOpen={isModalOpen} setIsOpen={setIsModalOpen} />

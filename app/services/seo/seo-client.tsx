@@ -20,8 +20,9 @@ import {
   Globe,
   Smartphone
 } from 'lucide-react';
+import { Post } from '@/lib/blog/posts-data';
 
-export default function SeoClientPage() {
+export default function SeoClientPage({ relatedPosts }: { relatedPosts?: Post[] }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
@@ -153,7 +154,7 @@ export default function SeoClientPage() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto mb-10 leading-relaxed"
           >
-            We optimize your local listings and build high-authority web presence to capture customers looking for your business. Rank #1 where your buyers are searching.
+            We optimize your local listings and build high-authority web presence to capture customers looking for your business. Rank #1 where your buyers are searching. Target local customers with our specialized <Link href="/locations/bangalore/seo-company" className="text-cyan-400 hover:underline">SEO company in Bangalore</Link> services.
           </motion.p>
 
           <motion.div
@@ -431,6 +432,39 @@ export default function SeoClientPage() {
           </button>
         </div>
       </section>
+
+      {relatedPosts && relatedPosts.length > 0 && (
+        <section className="py-24 px-6 relative border-t border-white/5 bg-white/[0.01]">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center max-w-3xl mx-auto mb-16">
+              <span className="text-[11px] font-bold tracking-[0.2em] text-cyan-400 uppercase">SEO Strategy</span>
+              <h2 className="text-3xl sm:text-4xl font-extrabold text-white mt-3">
+                Latest <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">SEO & Organic Guides</span>
+              </h2>
+              <p className="mt-4 text-zinc-400 text-base sm:text-lg">
+                Read our latest expert guidelines on local SEO strategy, medical practice SEO, and high-conversion layouts.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {relatedPosts.map((post) => (
+                <Link
+                  key={post.slug}
+                  href={`/blog/${post.slug}`}
+                  className="group flex flex-col p-8 bg-black hover:bg-white/[0.02] border border-white/10 hover:border-cyan-500/30 rounded-3xl transition-all duration-300 transform hover:-translate-y-1 text-left"
+                >
+                  <span className="text-xs font-bold text-cyan-400 uppercase tracking-widest mb-3">{post.category}</span>
+                  <h3 className="text-lg font-bold text-white mb-2 group-hover:text-cyan-300 transition-colors duration-200">{post.title}</h3>
+                  <p className="text-sm text-zinc-400 leading-relaxed mb-6 flex-grow">{post.description}</p>
+                  <span className="text-xs font-semibold text-white flex items-center gap-1">
+                    Read article <span className="group-hover:translate-x-1 transition-transform duration-200">→</span>
+                  </span>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       <Footer />
 

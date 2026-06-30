@@ -1,12 +1,13 @@
 'use client';
-
 import React, { useEffect, useState, useRef } from 'react';
+import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import Navbar from '@/components/ui/navbar';
 import Footer from '@/components/ui/footer';
 import StartProjectModal from '@/components/ui/start-project-modal';
+import { Post } from '@/lib/blog/posts-data';
 
-export default function SkincareClientPage() {
+export default function SkincareClientPage({ relatedPosts }: { relatedPosts?: Post[] }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [exitModalOpen, setExitModalOpen] = useState(false);
 
@@ -197,7 +198,7 @@ export default function SkincareClientPage() {
                   transition={{ duration: 0.8, delay: 0.2 }}
                   className="mt-6 text-lg md:text-xl text-zinc-400 leading-relaxed max-w-[620px]"
                 >
-                  We build premium salon websites, automated booking engines, WhatsApp & Instagram marketing systems, and local Google SEO that fills your chairs — 7 days a week, on autopilot.
+                  We build premium salon websites, automated booking engines, WhatsApp & Instagram marketing systems, and local Google SEO that fills your chairs — 7 days a week, on autopilot. Based in Bangalore? Check out our <Link href="/locations/bangalore" className="text-amber-500 hover:underline font-medium">Bangalore digital marketing agency</Link> services.
                 </motion.p>
 
                 <motion.div 
@@ -1122,6 +1123,38 @@ export default function SkincareClientPage() {
             </div>
           </div>
         </section>
+        {relatedPosts && relatedPosts.length > 0 && (
+          <section className="py-20 bg-zinc-950/20 border-t border-white/5">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="text-center max-w-3xl mx-auto mb-16">
+                <span className="text-[11px] font-bold tracking-[0.2em] text-rose-500 uppercase">Industry Insights</span>
+                <h2 className="text-3xl sm:text-4xl font-extrabold text-white mt-3">
+                  Salon Growth & <span className="bg-gradient-to-r from-amber-400 via-rose-400 to-violet-500 bg-clip-text text-transparent">Booking Optimization Guides</span>
+                </h2>
+                <p className="mt-4 text-zinc-400 text-base sm:text-lg">
+                  Read our latest strategies on ranking your salon on Google, minimizing no-shows, and increasing customer lifetime value.
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                {relatedPosts.map((post) => (
+                  <Link
+                    key={post.slug}
+                    href={`/blog/${post.slug}`}
+                    className="group flex flex-col p-8 bg-white/[0.02] hover:bg-white/[0.04] border border-white/[0.05] hover:border-white/[0.1] rounded-3xl transition-all duration-300 transform hover:-translate-y-1 text-left"
+                  >
+                    <span className="text-xs font-bold text-rose-500 uppercase tracking-widest mb-3">{post.category}</span>
+                    <h3 className="text-lg font-bold text-white mb-2 group-hover:text-rose-400 transition-colors duration-200">{post.title}</h3>
+                    <p className="text-sm text-zinc-400 leading-relaxed mb-6 flex-grow">{post.description}</p>
+                    <span className="text-xs font-semibold text-white flex items-center gap-1">
+                      Read article <span className="group-hover:translate-x-1 transition-transform duration-200">→</span>
+                    </span>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
 
         <Footer />
       </div>

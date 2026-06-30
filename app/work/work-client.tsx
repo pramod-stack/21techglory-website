@@ -25,8 +25,8 @@ export default function WorkClientPage() {
       title: "Premium Skincare & Dermatology Clinic Integration",
       category: "Conversion Design & Web Development",
       description: "Implemented a fully custom, high-speed landing page integration mapping legacy HTML structures to React, resolving client console errors, and replacing chat bottlenecks with standardized chatbot modal components.",
-      metrics: "2.8x Bookings Increase | 1.1s Load Time",
-      link: "/skincare",
+      metrics: "{{TODO: skincare_bookings_increase}} Bookings Increase | {{TODO: skincare_load_time}} Load Time",
+      link: "/work/skincare-website-conversion",
       isInternal: true,
       icon: Code2
     },
@@ -34,27 +34,27 @@ export default function WorkClientPage() {
       title: "Multi-Specialty Hospital Booking Platform",
       category: "Custom Software & CRM Automation",
       description: "Designed a bespoke healthcare scheduling system linking clinical intake forms directly to automated HubSpot CRM deal cards, instantly alerting desk coordinators on lead updates.",
-      metrics: "+34% Lead Conversion | 0% Form Loss",
-      link: "/hospitals",
+      metrics: "{{TODO: hospital_lead_conversion}} Lead Conversion | {{TODO: hospital_form_loss}} Form Loss",
+      link: "/work/hospital-booking-platform",
       isInternal: true,
       icon: Bot
     },
     {
-      title: "Local B2B Service Provider Local SEO Campaign",
+      title: "Bangalore Clinic Local SEO Campaign",
       category: "Search Engine Optimization & GMB",
       description: "Optimized city-specific service pages, cleaned business citations, and built a Google Business Profile review automation flow to capture regional intent terms.",
-      metrics: "Top 3 Local Maps Rankings | +120% Inbound Calls",
-      link: "/services/seo",
-      isInternal: false,
+      metrics: "{{TODO: clinic_seo_rankings}} Local Maps Rankings | {{TODO: clinic_seo_calls}} Inbound Calls",
+      link: "/work/clinic-seo-bangalore",
+      isInternal: true,
       icon: Search
     },
     {
-      title: "E-Commerce Fashion Brand Paid PPC Acquisition",
+      title: "E-Commerce Fashion Brand Paid PPC Restructure",
       category: "Paid Facebook & Google Ads Campaigns",
       description: "Restructured broad Google search keywords to exact intent queries, set up pixel attribution, and deployed optimized landing pages to capture social media buyers.",
-      metrics: "3.6x ROI Multiplier | -30% Lead Cost",
-      link: "/services/paid-ads",
-      isInternal: false,
+      metrics: "{{TODO: ecommerce_ppc_roi}} ROI Multiplier | {{TODO: ecommerce_ppc_cost}} Lead Cost",
+      link: "/work/ecommerce-ppc-restructure",
+      isInternal: true,
       icon: TrendingUp
     }
   ];

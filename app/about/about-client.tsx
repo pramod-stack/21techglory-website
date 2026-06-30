@@ -170,6 +170,99 @@ export default function AboutClientPage() {
         </div>
       </section>
 
+      {/* Company Metadata, Year, Cities & Tech Stack */}
+      <section className="py-24 px-6 relative border-t border-white/5 bg-white/[0.01]">
+        <div className="max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div className="space-y-6">
+              <h2 className="text-3xl font-bold text-white">Agency Profile & Key Footprint</h2>
+              <p className="text-gray-400 text-sm leading-relaxed">
+                21TechGlory was engineered to close the gap between bloated agency templates and custom, performant systems. Our operations are anchored around key geographic hubs and strict technical principles.
+              </p>
+              <div className="grid grid-cols-2 gap-6 pt-4">
+                <div className="p-4 rounded-2xl bg-black border border-white/10 space-y-1">
+                  <span className="text-xs text-gray-500 font-semibold uppercase">Established</span>
+                  <p className="text-lg font-bold text-cyan-400">{"{{TODO: year_established}}"}</p>
+                </div>
+                <div className="p-4 rounded-2xl bg-black border border-white/10 space-y-1">
+                  <span className="text-xs text-gray-500 font-semibold uppercase">Active Markets</span>
+                  <p className="text-sm font-bold text-cyan-400">{"{{TODO: target_cities}}"}</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="space-y-6">
+              <h2 className="text-3xl font-bold text-white">Our Engineering Stack</h2>
+              <p className="text-gray-400 text-sm leading-relaxed">
+                We develop and optimize systems using modern technologies to ensure search engine crawlability, instant load times, and dynamic scaling.
+              </p>
+              <div className="p-6 rounded-3xl bg-neutral-900/50 border border-white/10">
+                <p className="text-sm text-cyan-400 font-bold mb-2">Primary Core Technologies:</p>
+                <p className="text-xs text-gray-400 leading-relaxed font-mono">
+                  {"{{TODO: core_tech_stack}}"}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Team Section */}
+      <section className="py-24 px-6 relative border-t border-white/5">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Engineering & Growth Leaders</h2>
+            <p className="text-gray-400 text-sm md:text-base max-w-2xl mx-auto">
+              Meet the specialists leading our custom development, organic SEO architectures, and automated marketing systems.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* Team Member 1 */}
+            <div className="p-6 rounded-3xl bg-white/[0.02] border border-white/10 space-y-4">
+              <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-cyan-500 to-purple-600 flex items-center justify-center font-bold text-xl text-white">
+                ME
+              </div>
+              <div className="space-y-1">
+                <h4 className="text-lg font-bold text-white">{"{{TODO: team_member_1_name}}"}</h4>
+                <p className="text-xs text-cyan-400 font-semibold">{"{{TODO: team_member_1_role}}"}</p>
+              </div>
+              <p className="text-xs text-gray-400 leading-relaxed">
+                {"{{TODO: team_member_1_bio}}"}
+              </p>
+            </div>
+
+            {/* Team Member 2 */}
+            <div className="p-6 rounded-3xl bg-white/[0.02] border border-white/10 space-y-4">
+              <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-600 to-cyan-500 flex items-center justify-center font-bold text-xl text-white">
+                SE
+              </div>
+              <div className="space-y-1">
+                <h4 className="text-lg font-bold text-white">{"{{TODO: team_member_2_name}}"}</h4>
+                <p className="text-xs text-purple-400 font-semibold">{"{{TODO: team_member_2_role}}"}</p>
+              </div>
+              <p className="text-xs text-gray-400 leading-relaxed">
+                {"{{TODO: team_member_2_bio}}"}
+              </p>
+            </div>
+
+            {/* Team Member 3 */}
+            <div className="p-6 rounded-3xl bg-white/[0.02] border border-white/10 space-y-4">
+              <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-cyan-500 to-purple-600 flex items-center justify-center font-bold text-xl text-white">
+                AU
+              </div>
+              <div className="space-y-1">
+                <h4 className="text-lg font-bold text-white">{"{{TODO: team_member_3_name}}"}</h4>
+                <p className="text-xs text-cyan-400 font-semibold">{"{{TODO: team_member_3_role}}"}</p>
+              </div>
+              <p className="text-xs text-gray-400 leading-relaxed">
+                {"{{TODO: team_member_3_bio}}"}
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Service Links and Navigation */}
       <section className="py-24 px-6 relative bg-white/[0.01] border-y border-white/5">
         <div className="max-w-7xl mx-auto text-center">

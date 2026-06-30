@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import FloatingCTA from "@/components/ui/floating-cta";
+import { getOrganizationSchema } from "@/lib/schema/organization";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -36,6 +37,12 @@ export const metadata: Metadata = {
     locale: "en_IN",
     type: "website",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "21TechGlory | AI Growth & Digital Infrastructure Partner",
+    description: "Scale your business with AI, automation, and premium digital experiences.",
+    images: ["/og-image.jpg"],
+  },
 };
 
 export default function RootLayout({
@@ -43,12 +50,34 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const orgSchema = getOrganizationSchema();
+  const websiteSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "21TechGlory",
+    "url": "https://21techglory.com",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://21techglory.com/?s={search_term_string}"
+      },
+      "query-input": "required name=search_term_string"
+    }
+  };
+
   return (
     <html
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
       suppressHydrationWarning
     >
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify([orgSchema, websiteSchema]) }}
+        />
+      </head>
       <body className="min-h-full flex flex-col" suppressHydrationWarning>
         {children}
         <FloatingCTA />
