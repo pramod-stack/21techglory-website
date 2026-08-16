@@ -16,6 +16,12 @@ export function getLocalBusinessSchema(opts: LocalBusinessOpts) {
     "url": opts.url || "https://21techglory.com",
     "telephone": opts.telephone || "+91 77953 54043, +91 91102 91339",
     "email": opts.email || "tech@21techglory.com",
+    "hasMap": "https://maps.app.goo.gl/hFUMfadxu7NTBR6w8",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 13.0712476,
+      "longitude": 77.5985641
+    },
     "address": {
       "@type": "PostalAddress",
       "streetAddress": opts.address || "Bangalore, Karnataka, India",

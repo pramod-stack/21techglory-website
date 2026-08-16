@@ -23,6 +23,7 @@ export function getOrganizationSchema() {
       "addressRegion": "Karnataka",
       "postalCode": "560001",
       "addressCountry": "IN"
-    }
+    },
+    "hasMap": "https://maps.app.goo.gl/hFUMfadxu7NTBR6w8"
   };
 }

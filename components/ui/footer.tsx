@@ -122,7 +122,7 @@ export default function Footer() {
           <div className="flex flex-col space-y-2 text-xs text-gray-500 text-center lg:text-left w-full">
             <p>Email: <a href="mailto:tech@21techglory.com" className="text-cyan-400 hover:underline">tech@21techglory.com</a></p>
             <p>Phone: <a href="tel:+917795354043" className="text-cyan-400 hover:underline">+91 77953 54043 / +91 91102 91339</a></p>
-            <p>Office: Bangalore, Karnataka, India</p>
+            <p>Office: <a href="https://maps.app.goo.gl/hFUMfadxu7NTBR6w8" target="_blank" rel="noreferrer" className="text-cyan-400 hover:underline">Bangalore, Karnataka, India (Google Maps)</a></p>
             <p>Hours: Mon - Sat: 9:00 AM - 7:00 PM IST</p>
             <p>Entity: 21TechGlory</p>
             <p>GSTIN: Available upon request</p>

@@ -14,7 +14,8 @@ import {
   MessageSquare,
   Send,
   CheckCircle2,
-  AlertCircle
+  AlertCircle,
+  ExternalLink
 } from 'lucide-react';
 
 export default function ContactClientPage() {
@@ -183,6 +184,14 @@ export default function ContactClientPage() {
                 <div>
                   <h4 className="font-semibold text-sm text-gray-400">Office Location</h4>
                   <p className="text-white text-base">Bangalore, Karnataka, India</p>
+                  <a
+                    href="https://maps.app.goo.gl/hFUMfadxu7NTBR6w8"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center gap-1.5 mt-1 text-xs text-cyan-400 hover:text-cyan-300 transition-colors font-medium"
+                  >
+                    View on Google Maps <ExternalLink className="w-3.5 h-3.5" />
+                  </a>
                 </div>
               </div>
 
@@ -199,17 +208,27 @@ export default function ContactClientPage() {
 
             {/* Google Maps Location */}
             <div className="space-y-3">
-              <h3 className="text-lg font-bold text-white px-2">Find Us</h3>
+              <div className="flex items-center justify-between px-2">
+                <h3 className="text-lg font-bold text-white">Find Us</h3>
+                <a
+                  href="https://maps.app.goo.gl/hFUMfadxu7NTBR6w8"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-1.5 text-xs text-cyan-400 hover:text-cyan-300 transition-colors font-semibold bg-cyan-500/10 border border-cyan-500/30 px-3 py-1 rounded-lg hover:bg-cyan-500/20"
+                >
+                  Open in Google Maps <ExternalLink className="w-3.5 h-3.5" />
+                </a>
+              </div>
               <div className="w-full h-64 rounded-3xl overflow-hidden border border-white/10 relative">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d248849.886539092!2d77.49085232873138!3d12.953959988118022!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m3!2s1Z!2sBangalore%2C+Karnataka!5e0!3m2!1sen!2sin!4v1"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.10427845347!2d77.5959892!3d13.0712476!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1904a071d7e5%3A0xeefb400894426e5f!2s21TECHGLORY!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
                   allowFullScreen={true}
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  title="Office Location Map"
+                  title="21TechGlory Office Location Map"
                 ></iframe>
               </div>
             </div>
