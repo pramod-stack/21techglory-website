@@ -50,8 +50,8 @@ export default function BangaloreGbpPage() {
     "name": "21TechGlory Bangalore GBP Optimization",
     "description": "Professional Google Business Profile audit, citations cleanup, and local SEO services in Bangalore.",
     "url": "https://21techglory.com/locations/bangalore/google-business-profile-optimization",
-    "telephone": "{{TODO: phone}}",
-    "email": "{{TODO: branded_email}}",
+    "telephone": "+91 77953 54043, +91 91102 91339",
+    "email": "tech@21techglory.com",
     "priceRange": "$$",
     "geo": {
       "@type": "GeoCoordinates",

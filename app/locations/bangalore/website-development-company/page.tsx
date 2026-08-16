@@ -50,8 +50,8 @@ export default function BangaloreWebDevPage() {
     "name": "21TechGlory Bangalore Web Development",
     "description": "Custom Next.js website design and CRM integration company in Bangalore.",
     "url": "https://21techglory.com/locations/bangalore/website-development-company",
-    "telephone": "{{TODO: phone}}",
-    "email": "{{TODO: branded_email}}",
+    "telephone": "+91 77953 54043, +91 91102 91339",
+    "email": "tech@21techglory.com",
     "priceRange": "$$",
     "geo": {
       "@type": "GeoCoordinates",

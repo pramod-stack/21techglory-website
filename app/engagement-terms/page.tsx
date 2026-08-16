@@ -83,7 +83,7 @@ export default function Page() {
           <section className="space-y-3">
             <h2 className="text-xl font-bold text-white">7. Contact & Escalation</h2>
             <p>
-              For legal notifications, escalation of service issues, or questions regarding professional terms, please contact our escalation team at {"{{TODO: branded_email}}"}.
+              For legal notifications, escalation of service issues, or questions regarding professional terms, please contact our escalation team at tech@21techglory.com.
             </p>
           </section>
         </div>

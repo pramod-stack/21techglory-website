@@ -6,15 +6,15 @@ export function getOrganizationSchema() {
     "url": "https://21techglory.com",
     "logo": "https://21techglory.com/logo.png",
     "sameAs": [
-      "https://wa.me/{{TODO: whatsapp_number_raw}}",
-      "https://www.instagram.com/{{TODO: instagram_handle}}",
-      "https://linkedin.com/company/{{TODO: linkedin_company}}"
+      "https://wa.me/917795354043",
+      "https://www.instagram.com/21techglory",
+      "https://linkedin.com/company/21techglory"
     ],
     "contactPoint": {
       "@type": "ContactPoint",
-      "telephone": "{{TODO: contact_phone}}",
+      "telephone": "+91 77953 54043, +91 91102 91339",
       "contactType": "customer service",
-      "email": "{{TODO: branded_email}}"
+      "email": "tech@21techglory.com"
     },
     "address": {
       "@type": "PostalAddress",

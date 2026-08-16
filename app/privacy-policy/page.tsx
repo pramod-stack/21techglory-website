@@ -41,7 +41,7 @@ export default function Page() {
           <section className="space-y-3">
             <h2 className="text-xl font-bold text-white">1. Introduction</h2>
             <p>
-              Welcome to 21TechGlory ("we," "our," or "us"). We are committed to protecting your personal information and your right to privacy. If you have any questions or concerns about this privacy notice or our practices with regard to your personal info, please contact us at {"{{TODO: branded_email}}"}.
+              Welcome to 21TechGlory ("we," "our," or "us"). We are committed to protecting your personal information and your right to privacy. If you have any questions or concerns about this privacy notice or our practices with regard to your personal info, please contact us at tech@21techglory.com.
             </p>
           </section>
 

@@ -70,8 +70,8 @@ export default function BangaloreSeoPage() {
     "name": "21TechGlory Bangalore Office",
     "description": "Local SEO, GMB optimization, and custom Next.js website design company in Bangalore serving clinics, salons, and local service businesses.",
     "url": "https://21techglory.com/locations/bangalore/seo-company",
-    "telephone": "+91 77953 54043",
-    "email": "pramodn276@gmail.com",
+    "telephone": "+91 77953 54043, +91 91102 91339",
+    "email": "tech@21techglory.com",
     "priceRange": "$$",
     "address": {
       "@type": "PostalAddress",
@@ -94,7 +94,7 @@ export default function BangaloreSeoPage() {
     "name": "21TechGlory",
     "description": "Specialized B2B search engine optimization, local maps pack ranking, and citation listing auditing.",
     "url": "https://21techglory.com/locations/bangalore/seo-company",
-    "telephone": "+91 77953 54043",
+    "telephone": "+91 77953 54043, +91 91102 91339",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Bangalore, Karnataka, India",

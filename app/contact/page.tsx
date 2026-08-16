@@ -52,8 +52,8 @@ export default function Page() {
     "name": "21TechGlory",
     "description": "AI Growth & Digital Infrastructure Partner in Bangalore",
     "url": "https://21techglory.com",
-    "telephone": "{{TODO: contact_phone}}",
-    "email": "{{TODO: branded_email}}",
+    "telephone": "+91 77953 54043, +91 91102 91339",
+    "email": "tech@21techglory.com",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Bangalore, Karnataka, India",

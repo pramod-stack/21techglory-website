@@ -51,8 +51,8 @@ export default function BangaloreHubPage() {
     "name": "21TechGlory Bangalore Hub",
     "description": "Bangalore digital agency for websites, local SEO, GBP optimization, PPC, and AI automation.",
     "url": "https://21techglory.com/locations/bangalore",
-    "telephone": "{{TODO: phone}}",
-    "email": "{{TODO: branded_email}}",
+    "telephone": "+91 77953 54043, +91 91102 91339",
+    "email": "tech@21techglory.com",
     "priceRange": "$$",
     "geo": {
       "@type": "GeoCoordinates",
@@ -80,7 +80,7 @@ export default function BangaloreHubPage() {
     "name": "21TechGlory",
     "description": "Specialized B2B website development, search engine optimization, and local maps pack ranking in Bangalore.",
     "url": "https://21techglory.com/locations/bangalore",
-    "telephone": "{{TODO: phone}}",
+    "telephone": "+91 77953 54043, +91 91102 91339",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Bangalore, Karnataka, India",

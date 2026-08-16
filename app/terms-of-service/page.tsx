@@ -83,7 +83,7 @@ export default function Page() {
           <section className="space-y-3">
             <h2 className="text-xl font-bold text-white">7. Contact Us</h2>
             <p>
-              In order to resolve a complaint regarding the Site or to receive further information regarding use of the Site, please contact us at {"{{TODO: branded_email}}"}.
+              In order to resolve a complaint regarding the Site or to receive further information regarding use of the Site, please contact us at tech@21techglory.com.
             </p>
           </section>
         </div>

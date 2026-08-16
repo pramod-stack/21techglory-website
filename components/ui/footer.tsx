@@ -120,12 +120,12 @@ export default function Footer() {
             21TechGlory is a full-service digital agency helping local and growing businesses dominate online. We build websites, run ads, automate systems, and generate leads that convert to real revenue. Based in Bangalore — serving clients across India.
           </p>
           <div className="flex flex-col space-y-2 text-xs text-gray-500 text-center lg:text-left w-full">
-            <p>Email: <a href="mailto:{{TODO: branded_email}}" className="text-cyan-400 hover:underline">{"{{TODO: branded_email}}"}</a></p>
-            <p>Phone: <a href="tel:{{TODO: phone_raw}}" className="text-cyan-400 hover:underline">{"{{TODO: phone}}"}</a></p>
+            <p>Email: <a href="mailto:tech@21techglory.com" className="text-cyan-400 hover:underline">tech@21techglory.com</a></p>
+            <p>Phone: <a href="tel:+917795354043" className="text-cyan-400 hover:underline">+91 77953 54043 / +91 91102 91339</a></p>
             <p>Office: Bangalore, Karnataka, India</p>
             <p>Hours: Mon - Sat: 9:00 AM - 7:00 PM IST</p>
-            <p>Entity: {"{{TODO: company_entity}}"}</p>
-            <p>GSTIN: {"{{TODO: gstin}}"}</p>
+            <p>Entity: 21TechGlory</p>
+            <p>GSTIN: Available upon request</p>
           </div>
         </div>
         
@@ -169,7 +169,7 @@ export default function Footer() {
         <div className="flex flex-wrap items-center justify-center md:justify-start gap-4">
           <Link
             aria-label="WhatsApp"
-            href="https://wa.me/{{TODO: whatsapp_number_raw}}"
+            href="https://wa.me/917795354043"
             rel="noreferrer"
             target="_blank"
             className={Underline}
@@ -178,7 +178,7 @@ export default function Footer() {
           </Link>
           <Link
             aria-label="Instagram"
-            href="https://www.instagram.com/{{TODO: instagram_handle}}"
+            href="https://www.instagram.com/21techglory"
             rel="noreferrer"
             target="_blank"
             className={Underline}
@@ -187,7 +187,7 @@ export default function Footer() {
           </Link>
           <Link
             aria-label="LinkedIn"
-            href="https://linkedin.com/company/{{TODO: linkedin_company}}"
+            href="https://linkedin.com/company/21techglory"
             rel="noreferrer"
             target="_blank"
             className={Underline}

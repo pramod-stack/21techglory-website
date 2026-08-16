@@ -135,8 +135,8 @@ export default function ContactClientPage() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-sm text-gray-400">Email Address</h4>
-                  <a href="mailto:{{TODO: branded_email}}" className="text-white text-base hover:text-cyan-400 transition-colors">
-                    {"{{TODO: branded_email}}"}
+                  <a href="mailto:tech@21techglory.com" className="text-white text-base hover:text-cyan-400 transition-colors">
+                    tech@21techglory.com
                   </a>
                 </div>
               </div>
@@ -147,9 +147,15 @@ export default function ContactClientPage() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-sm text-gray-400">Phone Support</h4>
-                  <a href="tel:{{TODO: phone_raw}}" className="text-white text-base hover:text-cyan-400 transition-colors">
-                    {"{{TODO: phone}}"}
-                  </a>
+                  <div className="flex flex-col sm:flex-row sm:gap-3">
+                    <a href="tel:+917795354043" className="text-white text-base hover:text-cyan-400 transition-colors">
+                      +91 77953 54043
+                    </a>
+                    <span className="hidden sm:inline text-gray-500">|</span>
+                    <a href="tel:+919110291339" className="text-white text-base hover:text-cyan-400 transition-colors">
+                      +91 91102 91339
+                    </a>
+                  </div>
                 </div>
               </div>
 
@@ -160,7 +166,7 @@ export default function ContactClientPage() {
                 <div>
                   <h4 className="font-semibold text-sm text-gray-400">WhatsApp Chat</h4>
                   <a 
-                    href="https://wa.me/{{TODO: whatsapp_number_raw}}" 
+                    href="https://wa.me/917795354043" 
                     target="_blank" 
                     rel="noreferrer"
                     className="inline-flex items-center gap-2 mt-1 px-4 py-1.5 rounded-lg bg-green-500/10 border border-green-500/30 text-green-400 text-xs font-semibold hover:bg-green-500/20 transition-all"
@@ -196,7 +202,7 @@ export default function ContactClientPage() {
               <h3 className="text-lg font-bold text-white px-2">Find Us</h3>
               <div className="w-full h-64 rounded-3xl overflow-hidden border border-white/10 relative">
                 <iframe
-                  src="{{TODO: maps_embed_src}}"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d248849.886539092!2d77.49085232873138!3d12.953959988118022!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m3!2s1Z!2sBangalore%2C+Karnataka!5e0!3m2!1sen!2sin!4v1"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
