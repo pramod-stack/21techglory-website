@@ -7,6 +7,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Static routes
   const staticRoutes = [
     '',
+    '/us',
     '/about',
     '/contact',
     '/work',
@@ -18,11 +19,30 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/services/paid-ads',
     '/services/local-seo',
     '/services/google-business-profile-optimization',
+    '/locations/bangalore',
     '/locations/bangalore/seo-company',
+    '/locations/bangalore/google-business-profile-optimization',
+    '/locations/bangalore/website-development-company',
+    '/locations/bangalore/web-development',
+    '/locations/bangalore/whatsapp-automation',
+    '/locations/bangalore/crm-for-clinics',
+    '/locations/us/small-business/seo-company',
+    '/locations/us/d2c/seo-company',
+    '/locations/us/services/seo-company',
     '/industries',
     '/industries/clinics-hospitals',
     '/industries/salons-spas',
+    '/industries/fitness-gyms',
+    '/industries/industrial-manufacturing',
+    '/industries/beauty-cosmetics',
+    '/industries/software-it-services',
+    '/tools/growth-audit',
+    '/tools/site-audit',
+    '/tools/build-your-system',
     '/testimonials',
+    '/work/liger-fitness',
+    '/work/education-career-bridge',
+    '/work/namo-cranes',
     '/work/clinic-seo-bangalore',
     '/work/hospital-booking-platform',
     '/work/skincare-website-conversion',
@@ -30,7 +50,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/privacy-policy',
     '/terms-of-service',
     '/engagement-terms',
-    '/blog', // Blog hub route
+    '/blog',
   ];
 
   // Map static routes
@@ -38,10 +58,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     let priority = 0.8;
     let changeFrequency: 'daily' | 'weekly' | 'monthly' = 'weekly';
 
-    if (route === '') {
+    if (route === '' || route === '/us') {
       priority = 1.0;
       changeFrequency = 'daily';
-    } else if (route === '/blog') {
+    } else if (route === '/blog' || route === '/work' || route.startsWith('/tools')) {
       priority = 0.9;
       changeFrequency = 'daily';
     } else if (
@@ -71,4 +91,3 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return [...sitemapEntries, ...blogEntries];
 }
-

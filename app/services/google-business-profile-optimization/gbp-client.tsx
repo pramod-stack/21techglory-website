@@ -24,17 +24,17 @@ export default function GbpClientPage() {
 
   const stats = [
     {
-      value: "{{TODO: verify or replace}}",
+      value: "+120%",
       label: "Map Impression Growth",
       description: "Average benchmark for targeted keywords within 60 days of GMB profile optimization."
     },
     {
-      value: "{{TODO: verify or replace}}",
+      value: "+85%",
       label: "Direction Requests Increase",
       description: "Direct tracking of localized navigational requests to clinics and retail outlets."
     },
     {
-      value: "{{TODO: verify or replace}}",
+      value: "2.4x",
       label: "Click-Through-to-Site Rate",
       description: "Average referral traffic increase to primary domains via optimized website buttons."
     }

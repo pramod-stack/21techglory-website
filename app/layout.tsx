@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import FloatingCTA from "@/components/ui/floating-cta";
+import SmartCTA from "@/components/ui/smart-cta";
 import { getOrganizationSchema } from "@/lib/schema/organization";
 
 const geistSans = Geist({
@@ -80,7 +80,7 @@ export default function RootLayout({
       </head>
       <body className="min-h-full flex flex-col" suppressHydrationWarning>
         {children}
-        <FloatingCTA />
+        <SmartCTA />
       </body>
     </html>
   );

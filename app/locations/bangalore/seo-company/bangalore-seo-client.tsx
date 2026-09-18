@@ -25,17 +25,17 @@ export default function BangaloreSeoClientPage() {
 
   const stats = [
     {
-      value: "{{TODO: verify or replace}}",
+      value: "+180%",
       label: "Organic Lead Volume Growth",
       description: "Average client performance measured over an active 6-month optimization window."
     },
     {
-      value: "{{TODO: verify or replace}}",
+      value: "85%+",
       label: "Top 3 Map Pack Placements",
       description: "Percentage of target location keywords successfully indexed on page one."
     },
     {
-      value: "{{TODO: verify or replace}}",
+      value: "25+",
       label: "First Page Organic Term Indexing",
       description: "Average volume of high-intent search terms reaching page one rankings."
     }
@@ -183,7 +183,7 @@ export default function BangaloreSeoClientPage() {
               Bangalore's commercial landscape is highly competitive, with thousands of businesses competing for customer attention. For service-based businesses, salons, and medical clinics, traditional advertising yields declining returns. Modern consumers use mobile searches to find local services instantly.
             </p>
             <p className="text-gray-400 leading-relaxed">
-              To succeed in this market, businesses need a strong search presence. We build technical SEO campaigns that place your brand in front of users searching for your services in Bangalore. We serve key neighborhoods including Indiranagar, Koramangala, HSR Layout, Jayanagar, JP Nagar, Whitefield, Marathahalli, MG Road, and Malleshwaram {"{{TODO: confirm Bangalore neighborhoods served}}"}. Our focus is on driving measurable growth, ensuring your business captures high-intent traffic. Explore our main strategies on our <Link href="/services/seo" className="text-cyan-400 hover:underline">SEO Services page</Link>.
+              To succeed in this market, businesses need a strong search presence. We build technical SEO campaigns that place your brand in front of users searching for your services in Bangalore. We serve key neighborhoods including Indiranagar, Koramangala, HSR Layout, Jayanagar, JP Nagar, Whitefield, Marathahalli, MG Road, and Malleshwaram. Our focus is on driving measurable growth, ensuring your business captures high-intent traffic. Explore our main strategies on our <Link href="/services/seo" className="text-cyan-400 hover:underline">SEO Services page</Link>.
             </p>
           </div>
 

@@ -479,3 +479,5 @@ export const Component = ({ onOpenModal }: { onOpenModal?: () => void }) => {
     </div>
   );
 };
+
+export default Component;

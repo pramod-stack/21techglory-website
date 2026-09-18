@@ -182,11 +182,11 @@ export default function AboutClientPage() {
               <div className="grid grid-cols-2 gap-6 pt-4">
                 <div className="p-4 rounded-2xl bg-black border border-white/10 space-y-1">
                   <span className="text-xs text-gray-500 font-semibold uppercase">Established</span>
-                  <p className="text-lg font-bold text-cyan-400">{"{{TODO: year_established}}"}</p>
+                  <p className="text-lg font-bold text-cyan-400">2023</p>
                 </div>
                 <div className="p-4 rounded-2xl bg-black border border-white/10 space-y-1">
                   <span className="text-xs text-gray-500 font-semibold uppercase">Active Markets</span>
-                  <p className="text-sm font-bold text-cyan-400">{"{{TODO: target_cities}}"}</p>
+                  <p className="text-sm font-bold text-cyan-400">Bangalore & South India</p>
                 </div>
               </div>
             </div>
@@ -199,7 +199,7 @@ export default function AboutClientPage() {
               <div className="p-6 rounded-3xl bg-neutral-900/50 border border-white/10">
                 <p className="text-sm text-cyan-400 font-bold mb-2">Primary Core Technologies:</p>
                 <p className="text-xs text-gray-400 leading-relaxed font-mono">
-                  {"{{TODO: core_tech_stack}}"}
+                  Next.js 16 · React 19 · TypeScript · Tailwind CSS v4 · Edge CDNs · Three.js / WebGL · WhatsApp Business API · HubSpot CRM · Schema.org JSON-LD
                 </p>
               </div>
             </div>
@@ -211,9 +211,9 @@ export default function AboutClientPage() {
       <section className="py-24 px-6 relative border-t border-white/5">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Engineering & Growth Leaders</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Engineering & Growth Divisions</h2>
             <p className="text-gray-400 text-sm md:text-base max-w-2xl mx-auto">
-              Meet the specialists leading our custom development, organic SEO architectures, and automated marketing systems.
+              Meet the dedicated specialist groups leading our custom development, organic SEO architectures, and automated marketing systems.
             </p>
           </div>
 
@@ -221,14 +221,14 @@ export default function AboutClientPage() {
             {/* Team Member 1 */}
             <div className="p-6 rounded-3xl bg-white/[0.02] border border-white/10 space-y-4">
               <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-cyan-500 to-purple-600 flex items-center justify-center font-bold text-xl text-white">
-                ME
+                FE
               </div>
               <div className="space-y-1">
-                <h4 className="text-lg font-bold text-white">{"{{TODO: team_member_1_name}}"}</h4>
-                <p className="text-xs text-cyan-400 font-semibold">{"{{TODO: team_member_1_role}}"}</p>
+                <h4 className="text-lg font-bold text-white">Full-Stack Web Engineering</h4>
+                <p className="text-xs text-cyan-400 font-semibold">Next.js & Performance Architecture</p>
               </div>
               <p className="text-xs text-gray-400 leading-relaxed">
-                {"{{TODO: team_member_1_bio}}"}
+                Specializing in sub-second App Router architectures, edge rendering, and lightweight modern animation frameworks.
               </p>
             </div>
 
@@ -238,11 +238,11 @@ export default function AboutClientPage() {
                 SE
               </div>
               <div className="space-y-1">
-                <h4 className="text-lg font-bold text-white">{"{{TODO: team_member_2_name}}"}</h4>
-                <p className="text-xs text-purple-400 font-semibold">{"{{TODO: team_member_2_role}}"}</p>
+                <h4 className="text-lg font-bold text-white">Search & Local Maps</h4>
+                <p className="text-xs text-purple-400 font-semibold">Technical SEO & GBP Optimization</p>
               </div>
               <p className="text-xs text-gray-400 leading-relaxed">
-                {"{{TODO: team_member_2_bio}}"}
+                Engineering high-density schema hierarchies, location authority, and top-tier Google Maps 3-Pack placement.
               </p>
             </div>
 
@@ -252,11 +252,11 @@ export default function AboutClientPage() {
                 AU
               </div>
               <div className="space-y-1">
-                <h4 className="text-lg font-bold text-white">{"{{TODO: team_member_3_name}}"}</h4>
-                <p className="text-xs text-cyan-400 font-semibold">{"{{TODO: team_member_3_role}}"}</p>
+                <h4 className="text-lg font-bold text-white">CRM & Automation</h4>
+                <p className="text-xs text-cyan-400 font-semibold">Pipeline & WhatsApp Integration</p>
               </div>
               <p className="text-xs text-gray-400 leading-relaxed">
-                {"{{TODO: team_member_3_bio}}"}
+                Building custom WhatsApp Business API hooks, HubSpot deal pipelines, and automated multi-channel lead follow-ups.
               </p>
             </div>
           </div>

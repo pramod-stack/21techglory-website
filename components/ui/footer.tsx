@@ -128,7 +128,7 @@ export default function Footer() {
             <p>GSTIN: Available upon request</p>
           </div>
         </div>
-        
+
         <div className="w-full lg:w-auto">
           {navigation.categories.map((category) => (
             <div

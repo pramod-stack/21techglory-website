@@ -50,7 +50,8 @@ export default function ContactClientPage() {
     e.preventDefault();
     setStatus('loading');
     try {
-      const response = await fetch('{{TODO: form_endpoint}}', {
+      const endpoint = process.env.NEXT_PUBLIC_FORM_ENDPOINT || '/api/contact';
+      const response = await fetch(endpoint, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData)

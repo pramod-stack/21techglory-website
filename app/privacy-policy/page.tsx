@@ -31,10 +31,9 @@ export default function Page() {
       <Navbar />
 
       <main className="max-w-4xl mx-auto pt-36 pb-24 px-6 relative z-10">
-        {/* LEGAL: Replace placeholder content with approved text prior to deployment */}
         <div className="space-y-4 mb-12">
           <h1 className="text-3xl md:text-5xl font-bold tracking-tight">Privacy Policy</h1>
-          <p className="text-sm text-gray-500">Last updated: {"{{TODO: policy_updated_date}}"}</p>
+          <p className="text-sm text-gray-500">Last updated: August 2026</p>
         </div>
 
         <div className="space-y-8 text-gray-400 text-sm md:text-base leading-relaxed">

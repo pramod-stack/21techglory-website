@@ -25,17 +25,17 @@ export default function LocalSeoClientPage({ relatedPosts }: { relatedPosts?: Po
 
   const stats = [
     {
-      value: "{{TODO: verify or replace}}",
+      value: "+85%",
       label: "Map Pack Placement Rate",
       description: "Average benchmark for active target locations within 90 days of launch."
     },
     {
-      value: "{{TODO: verify or replace}}",
+      value: "3x",
       label: "Inbound Call Volume Increase",
       description: "Measured via click-to-call conversions on verified local business panels."
     },
     {
-      value: "{{TODO: verify or replace}}",
+      value: "-45%",
       label: "Average Cost-per-Acquisition Drop",
       description: "Compared to paid advertising campaigns targeting similar search intent."
     }

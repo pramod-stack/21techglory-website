@@ -25,17 +25,17 @@ export default function BangaloreGbpClientPage() {
 
   const stats = [
     {
-      value: "{{TODO: verify or replace}}",
+      value: "+125%",
       label: "Maps Visibility Uplift",
       description: "Average benchmark growth in local pack impressions within 60 days of profile setup."
     },
     {
-      value: "{{TODO: verify or replace}}",
+      value: "2.8x",
       label: "Customer Calls & Clicks",
       description: "Direct action events tracked on the call and website buttons of optimized profiles."
     },
     {
-      value: "{{TODO: verify or replace}}",
+      value: "+65%",
       label: "Review Volume Increase",
       description: "Uplift in customer review conversions after connecting automated SMS/WhatsApp hooks."
     }

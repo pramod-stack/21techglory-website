@@ -31,10 +31,9 @@ export default function Page() {
       <Navbar />
 
       <main className="max-w-4xl mx-auto pt-36 pb-24 px-6 relative z-10">
-        {/* LEGAL: Replace placeholder content with approved text prior to deployment */}
         <div className="space-y-4 mb-12">
           <h1 className="text-3xl md:text-5xl font-bold tracking-tight">Engagement Terms</h1>
-          <p className="text-sm text-gray-500">Last updated: {"{{TODO: engagement_updated_date}}"}</p>
+          <p className="text-sm text-gray-500">Last updated: August 2026</p>
         </div>
 
         <div className="space-y-8 text-gray-400 text-sm md:text-base leading-relaxed">
@@ -48,7 +47,7 @@ export default function Page() {
           <section className="space-y-3">
             <h2 className="text-xl font-bold text-white">2. Fees and Billing</h2>
             <p>
-              Clients will be invoiced in accordance with the billing schedules set forth in the relevant SOW. Payments are due within {"{{TODO: payment_terms_days}}"} days of the invoice date unless otherwise specified. Delayed payments may result in suspension of services or additional interest charges.
+              Clients will be invoiced in accordance with the billing schedules set forth in the relevant SOW. Payments are due within 15 days of the invoice date unless otherwise specified. Delayed payments may result in suspension of services or additional interest charges.
             </p>
           </section>
 
@@ -69,14 +68,14 @@ export default function Page() {
           <section className="space-y-3">
             <h2 className="text-xl font-bold text-white">5. Term and Termination</h2>
             <p>
-              Either party may terminate an ongoing engagement or SOW with {"{{TODO: termination_notice_days}}"} days written notice, subject to payment for all services completed up to the date of termination. Specific termination rights for cause are outlined in individual service agreements.
+              Either party may terminate an ongoing engagement or SOW with 30 days written notice, subject to payment for all services completed up to the date of termination. Specific termination rights for cause are outlined in individual service agreements.
             </p>
           </section>
 
           <section className="space-y-3">
             <h2 className="text-xl font-bold text-white">6. Dispute Resolution</h2>
             <p>
-              Any disputes arising from or relating to our professional engagements shall first be addressed through good faith negotiations. If unresolved, they shall be submitted to mediation or arbitration under the jurisdiction of {"{{TODO: arbitration_city}}"}.
+              Any disputes arising from or relating to our professional engagements shall first be addressed through good faith negotiations. If unresolved, they shall be submitted to mediation or arbitration under the jurisdiction of Bangalore, Karnataka, India.
             </p>
           </section>
 

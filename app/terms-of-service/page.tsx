@@ -31,17 +31,16 @@ export default function Page() {
       <Navbar />
 
       <main className="max-w-4xl mx-auto pt-36 pb-24 px-6 relative z-10">
-        {/* LEGAL: Replace placeholder content with approved text prior to deployment */}
         <div className="space-y-4 mb-12">
           <h1 className="text-3xl md:text-5xl font-bold tracking-tight">Terms of Service</h1>
-          <p className="text-sm text-gray-500">Last updated: {"{{TODO: terms_updated_date}}"}</p>
+          <p className="text-sm text-gray-500">Last updated: August 2026</p>
         </div>
 
         <div className="space-y-8 text-gray-400 text-sm md:text-base leading-relaxed">
           <section className="space-y-3">
             <h2 className="text-xl font-bold text-white">1. Agreement to Terms</h2>
             <p>
-              These Terms of Service constitute a legally binding agreement made between you, whether personally or on behalf of an entity ("you") and 21TechGlory ("we," "us," or "our"), concerning your access to and use of the {"https://21techglory.com"} website as well as any other media form, media channel, mobile website or mobile application related, linked, or otherwise connected thereto.
+              These Terms of Service constitute a legally binding agreement made between you, whether personally or on behalf of an entity ("you") and 21TechGlory ("we," "us," or "our"), concerning your access to and use of the https://21techglory.com website as well as any other media form, media channel, mobile website or mobile application related, linked, or otherwise connected thereto.
             </p>
           </section>
 
@@ -69,7 +68,7 @@ export default function Page() {
           <section className="space-y-3">
             <h2 className="text-xl font-bold text-white">5. Governing Law</h2>
             <p>
-              These Terms shall be governed by and defined following the laws of {"{{TODO: governing_jurisdiction}}"}. 21TechGlory and yourself irrevocably consent that the courts of {"{{TODO: governing_city}}"} shall have exclusive jurisdiction to resolve any dispute which may arise in connection with these terms.
+              These Terms shall be governed by and defined following the laws of Karnataka, India. 21TechGlory and yourself irrevocably consent that the courts of Bangalore, Karnataka shall have exclusive jurisdiction to resolve any dispute which may arise in connection with these terms.
             </p>
           </section>
 

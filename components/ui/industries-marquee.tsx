@@ -1,25 +1,39 @@
 "use client";
 
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Stethoscope, Activity, Home, UtensilsCrossed, Rocket, Building2, MapPin } from 'lucide-react';
+import React, { useRef } from 'react';
+import { motion, useInView, useReducedMotion } from 'framer-motion';
+import { 
+  Stethoscope, 
+  Dumbbell, 
+  Sparkles, 
+  Truck, 
+  Code2, 
+  Building2, 
+  ShoppingBag, 
+  MapPin 
+} from 'lucide-react';
 
 const industries = [
-  { name: "Clinics", icon: Stethoscope },
-  { name: "Doctors", icon: Activity },
-  { name: "PGs & Hostels", icon: Home },
-  { name: "Restaurants", icon: UtensilsCrossed },
-  { name: "Startups", icon: Rocket },
-  { name: "Real Estate", icon: Building2 },
+  { name: "Clinics & Healthcare", icon: Stethoscope },
+  { name: "Fitness & Gyms", icon: Dumbbell },
+  { name: "Salons & Aesthetics", icon: Sparkles },
+  { name: "Industrial & Cranes", icon: Truck },
+  { name: "Software & IT", icon: Code2 },
+  { name: "Elevators & Manufacturing", icon: Building2 },
+  { name: "Cosmetics & D2C", icon: ShoppingBag },
   { name: "Local Businesses", icon: MapPin },
 ];
 
 export default function IndustriesMarquee() {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const isInView = useInView(containerRef, { margin: "100px" });
+  const shouldReduceMotion = useReducedMotion();
+
   // Duplicate the array to create a seamless loop
   const duplicatedIndustries = [...industries, ...industries, ...industries];
 
   return (
-    <section className="py-20 bg-transparent overflow-hidden relative z-10">
+    <section ref={containerRef} className="py-20 bg-transparent overflow-hidden relative z-10">
       <div className="max-w-7xl mx-auto px-6 mb-12 text-center">
         <p className="text-sm font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500 uppercase tracking-widest">
           Industries We Dominate
@@ -28,15 +42,15 @@ export default function IndustriesMarquee() {
 
       <div className="relative w-full flex overflow-hidden">
         {/* Left and right fade gradients */}
-        <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-black/80 to-transparent z-10 pointer-events-none" />
-        <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-black/80 to-transparent z-10 pointer-events-none" />
+        <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-black via-black/80 to-transparent z-10 pointer-events-none" />
+        <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-black via-black/80 to-transparent z-10 pointer-events-none" />
 
         <motion.div
-          animate={{ x: ["0%", "-33.33%"] }}
+          animate={isInView && !shouldReduceMotion ? { x: ["0%", "-33.33%"] } : { x: "0%" }}
           transition={{
             repeat: Infinity,
             ease: "linear",
-            duration: 20,
+            duration: 25,
           }}
           className="flex gap-8 whitespace-nowrap px-4"
         >

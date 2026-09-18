@@ -36,12 +36,12 @@ export const metadata: Metadata = {
 export default function BangaloreHubPage() {
   // neighborhoods suggestion: Whitefield, Indiranagar, Koramangala, HSR Layout, MG Road, Electronic City
   const neighborhoods = [
-    "{{TODO: neighborhood - Whitefield}}",
-    "{{TODO: neighborhood - Indiranagar}}",
-    "{{TODO: neighborhood - Koramangala}}",
-    "{{TODO: neighborhood - HSR Layout}}",
-    "{{TODO: neighborhood - MG Road}}",
-    "{{TODO: neighborhood - Electronic City}}"
+    "Whitefield",
+    "Indiranagar",
+    "Koramangala",
+    "HSR Layout",
+    "MG Road",
+    "Electronic City"
   ];
 
   const localBusinessSchema = {
@@ -56,8 +56,8 @@ export default function BangaloreHubPage() {
     "priceRange": "$$",
     "geo": {
       "@type": "GeoCoordinates",
-      "latitude": "{{TODO: latitude}}",
-      "longitude": "{{TODO: longitude}}"
+      "latitude": "13.0712476",
+      "longitude": "77.5959892"
     },
     "address": {
       "@type": "PostalAddress",
